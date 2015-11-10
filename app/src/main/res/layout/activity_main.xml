@@ -9,25 +9,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="New Button"
-        android:id="@+id/button_Record"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="New Button"
-        android:id="@+id/button_stop"
-        android:layout_below="@+id/button_Record"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="69dp" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="New Button"
         android:id="@+id/button_play"
         android:layout_centerVertical="true"
         android:layout_alignParentLeft="true"
@@ -50,16 +31,32 @@
             android:layout_centerHorizontal="true"
             android:background="@drawable/mic" />
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:id="@+id/textView_count"
+            android:layout_alignTop="@+id/imageButton_mic"
+            android:layout_alignRight="@+id/imageButton_mic"
+            android:layout_alignEnd="@+id/imageButton_mic" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageView_voicedb"
+            android:layout_alignBottom="@+id/imageButton_mic"
+            android:layout_toRightOf="@+id/textView_count"
+            android:layout_toEndOf="@+id/textView_count"/>
+
     </RelativeLayout>
 
-    <TextView
+    <ListView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:id="@+id/textView_count"
-        android:layout_centerVertical="true"
-        android:layout_alignRight="@+id/rllayout"
-        android:layout_alignEnd="@+id/rllayout"
-        android:layout_marginRight="71dp"
-        android:layout_marginEnd="71dp" />
+        android:id="@+id/listView_playList"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_above="@+id/button_play" />
+
 </RelativeLayout>
